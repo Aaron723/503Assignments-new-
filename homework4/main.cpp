@@ -42,10 +42,13 @@ int main()
 			cout << "Please enter the ISBN number of the book you want to buy" << endl;
 
 			cin >> ISBN1;
-
 			insert(book_list,counter, ISBN1);	//insert a book to the end of the list
-			if(counter<=19)//every time insert a book, the length of book +1
-			    counter++;
+			if(counter<=19)
+			{
+				counter++;
+				sorted=false;
+			}//every time insert a book, the length of book +1
+
 
 			Print(book_list, counter);			//after insert a book, print the list.
 
@@ -59,7 +62,11 @@ int main()
 
 			insert_certain(book_list, counter, ISBN2, position2);
 			if(counter<=19)
-			counter++;			//every time insert a book, the length of book +1
+			{
+				counter++;
+				sorted=false;
+			}
+					//every time insert a book, the length of book +1
 			Print(book_list, counter);	//after insert a book, print the list.
 
 			break;

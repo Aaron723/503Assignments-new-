@@ -89,7 +89,7 @@ int main()
 
 			position4 = find_binary(book_list, ISBN4, counter, sorted);
 
-			if (position4 != -1)
+			if (position4 >= 0)
 			{
 				cout << "The position is " << position4 << endl;
 			}
@@ -115,6 +115,7 @@ int main()
 			cin >> ISBN6;
 			delete_item_isbn(book_list, counter, ISBN6);
 			counter--;
+
 			Print(book_list, counter);
 			break;
 		case 7:			//sort booklist using selection, after that, print booklist
@@ -208,7 +209,7 @@ int find_binary(int book_list[20], int ISBN, int counter, bool sorted)
 	}
 	else
 	{
-		int low = 0, high = counter - 1, i;
+		int low = 0, high = counter - 1, i=0;
 
 
 
@@ -217,16 +218,20 @@ int find_binary(int book_list[20], int ISBN, int counter, bool sorted)
 
 			i = (low + high) / 2;
 
-			if (*(book_list + i) == ISBN)
+			if (book_list[i] == ISBN)
 				break;
-			else if (*(book_list + i) > ISBN)
-			{
-				low = i + 1;
-			}
-			else if (*(book_list + i) < ISBN)
-			{
-				high = i - 1;
-			}
+			else
+            {
+                if (ISBN>book_list[i])
+                {
+                    low = i + 1;
+                }
+                 if (ISBN<book_list[i])
+                {
+                    high = i - 1;
+                }
+            }
+
 		}
 
 		if (low > high)

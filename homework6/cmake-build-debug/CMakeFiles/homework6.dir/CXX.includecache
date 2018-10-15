@@ -6,15 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/ziwan/CLionProjects/503Assignments/homework6/Booklist_lastName.cpp
-Booklist_lastName.h
-/Users/ziwan/CLionProjects/503Assignments/homework6/Booklist_lastName.h
-iostream
--
-iomanip
--
-
 /Users/ziwan/CLionProjects/503Assignments/homework6/Booklist_lastName.h
 vector
 -
+
+/Users/ziwan/CLionProjects/503Assignments/homework6/main.cpp
+iostream
+-
+Booklist_lastName.h
+/Users/ziwan/CLionProjects/503Assignments/homework6/Booklist_lastName.h
 

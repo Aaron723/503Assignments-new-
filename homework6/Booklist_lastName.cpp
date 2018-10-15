@@ -5,29 +5,30 @@
 #include<iostream>
 #include<iomanip>
 using namespace std;
-Booklist::Booklist()
+Booklist::Booklist()//initialize the booklist
 {
     max_size=20;
     counter=0;
     sorted=false;
 
 }
-Booklist::~Booklist() {
+Booklist::~Booklist() //clear the vector
+{
     book_list.clear();
 }
-void Booklist::insert(int ISBN) 
+void Booklist::insert(int ISBN) //put a book on the last position
 {
     if(counter<=max_size)
     {
         book_list.push_back(ISBN);
         counter++;
-        sorted=false;
+        sorted=false;//when the user input a number in the list, it needs sort again
     }
-    else
+    else//once the booklist is full, don't do anything
         cout<<"The list is full!"<<endl;
 }
 
-void Booklist::Print()
+void Booklist::Print()//print the list
 {
     if(counter>=1)
     {
@@ -40,7 +41,7 @@ void Booklist::Print()
     else
         cout<<"There is no book in the list!"<<endl;
 }
-void Booklist::insert_certain(int position, int ISBN)
+void Booklist::insert_certain(int position, int ISBN)//insert book in a specific position(start from 0)
 {
     if(position>counter||position<0)
     {
@@ -48,19 +49,19 @@ void Booklist::insert_certain(int position, int ISBN)
     }
     else
     {
-        book_list.push_back(0);
-        for (int i = counter - 1; i != position - 1; i--)			//move elements to the next position so that the new can be inserted.
+        book_list.push_back(0);//add a empty position in the end
+        for (int i = counter - 1; i != position - 1; i--)//move elements to the next position so that the new can be inserted.
         {
             book_list[i+1] = book_list[i];
         }
         book_list[position] = ISBN;
-        sorted=false;
+        sorted=false;//when the user input a number in the list, it needs sort again
         counter++;
     }
 }
 void Booklist::find_linear(int ISBN)
 {
-    int position = -1;		//if the book isn't in the list, return -1.
+    int position = -1;//define a number to suggest the position of book
     for (int i = 0; i != counter; i++)			//linear search
     {
         if (book_list[i] == ISBN)
@@ -69,14 +70,14 @@ void Booklist::find_linear(int ISBN)
             break;
         }
     }
-    if(position==-1)
+    if(position==-1)//the book isn't in the list
         cout<<"This book is not in list!"<<endl;
     else
         cout<<"This book is on "<<position<<endl;
 }
 void Booklist::find_binary(int ISBN)
 {
-    if(sorted==true)
+    if(sorted==true)//we can only use binary search in a sorted list
     {
         int low = 0, high = counter - 1, mid=0;
         while (low <= high)			//binary search
@@ -105,7 +106,7 @@ void Booklist::find_binary(int ISBN)
 }
 void Booklist::delete_item_position(int position)
 {
-    if (position >= counter||position<0)
+    if (position >= counter||position<0)//when the book doesn't exist, do nothing
         cout << "This book is not in the list!" << endl;
     else
     {
@@ -114,7 +115,7 @@ void Booklist::delete_item_position(int position)
             book_list[i] = book_list[i+1];
         }
         counter--;
-        book_list.pop_back();
+        book_list.pop_back();//remove the last position, or the push_back function could appear bug.
     }
 
 }
@@ -130,7 +131,7 @@ void Booklist::delete_item_isbn(int ISBN)
             break;
         }
     }
-    if(position==-1)
+    if(position==-1)//when the book doesn't exist, do nothing
         cout<<"This book isn't in list!"<<endl;
     else
     {
@@ -139,7 +140,7 @@ void Booklist::delete_item_isbn(int ISBN)
             book_list[i] = book_list[i+1];
         }
         counter--;
-        book_list.pop_back();
+        book_list.pop_back();//remove the last position, or the push_back function could appear bug.
     }
 }
 void Booklist::sort_list_selection()
@@ -181,7 +182,7 @@ void Booklist::sorted_list_bubble()
     }
     sorted=true;
 }
-void Booklist::Getcounter()
+void Booklist::Getcounter()//make it easy to see how many books in the list
 {
     cout<<"counter="<<counter<<endl;
 }

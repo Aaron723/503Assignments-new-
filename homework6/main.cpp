@@ -1,20 +1,20 @@
 
 //Ziqi Wang
 #include <iostream>
-#include"Booklist_lastName.h"
+#include"Booklist_lastName.h"//add the header file and .cpp file.
 using namespace std;
 int main()
 {
-    int i = 6;//		initialize a counter to record the length of array, i is the choice user want to put
-    Booklist Book_List;
+    int i = 6;//i is the choice user want to put
+    Booklist Book_List;//create a object of class Book_list
 
     while (i != 0)
     {
         //ask users to input their choice, if they input 0, quit.
         cout << "Choice1, insert a new book at the end\n" << "Choice2, insert a book in the certain position\n" << "Choice3, find a book(unsorted)\n"
              << "Choice4, sort the list and find a book\n" << "Choice5, delete a book in a certain position\n" << "Choice6, delete a book using ISBN\n"
-             << "Choice7, sort the list(selection sort)\n"<< "Choice8, Sort the list(bubble sort)\n" <<"when you enter 0, quit\n"<< endl;
-
+             << "Choice7, sort the list(selection sort)\n"<< "Choice8, Sort the list(bubble sort)\n" <<"Choice9, Print the list\n"
+             <<"when you enter 0, quit"<<endl;
         cin >> i;
 
         switch (i)
@@ -32,7 +32,7 @@ int main()
                 break;
             case 2:
                 int ISBN2;
-                int position2;			//the position user want to put this book
+                int position2;			//the position user want to put this book(start from 0)
                 cout << "Please enter the position you want to insert and ISBN" << endl;
                 cin >> position2 >> ISBN2;
                 Book_List.insert_certain(position2, ISBN2);
@@ -78,7 +78,11 @@ int main()
                 Book_List.sorted_list_bubble();
                 Book_List.Print();
                 break;
-            case 0:
+            case 9://print the booklist and number of books
+                Book_List.Print();
+                Book_List.Getcounter();
+                break;
+            case 0://leave
                 break;
 
             default:

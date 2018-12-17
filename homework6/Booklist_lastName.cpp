@@ -1,4 +1,4 @@
-//
+//Ziqi Wang 10.14homework6
 // Created by Zi Wan on 10/13/18.
 //
 #include"Booklist_lastName.h"
@@ -18,7 +18,7 @@ Booklist::~Booklist() //clear the vector
 }
 void Booklist::insert(int ISBN) //put a book on the last position
 {
-    if(counter<=max_size)
+    if(counter<max_size)
     {
         book_list.push_back(ISBN);
         counter++;

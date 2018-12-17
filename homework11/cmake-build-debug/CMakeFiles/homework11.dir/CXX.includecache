@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ziwan/CLionProjects/503Assignments/homework11/Booklist.h
+vector
+-
+string
+-
+iostream
+-
+iomanip
+-
+
+/Users/ziwan/CLionProjects/503Assignments/homework11/main.cpp
+Booklist.h
+/Users/ziwan/CLionProjects/503Assignments/homework11/Booklist.h
+

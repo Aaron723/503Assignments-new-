@@ -1,5 +1,4 @@
-//
-// Created by Zi Wan on 10/12/18.
+//Ziqi Wang 10.14 homework6
 //Declarition of class and prototypes of member function;
 
 #ifndef HOMEWORK6_BOOKLIST_LASTNAME_H

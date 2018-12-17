@@ -1,0 +1,3 @@
+/Users/ziwan/CLionProjects/503Assignments/inclass5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/ziwan/CLionProjects/503Assignments/inclass5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ziwan/CLionProjects/503Assignments/inclass5/cmake-build-debug/CMakeFiles/inclass5.dir

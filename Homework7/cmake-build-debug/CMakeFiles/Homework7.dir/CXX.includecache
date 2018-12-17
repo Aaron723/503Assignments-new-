@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ziwan/CLionProjects/503Assignments/Homework7/Polynomial_Ziqi Wang.cpp
+iostream
+-
+Polynomial_Ziqi Wang.h
+/Users/ziwan/CLionProjects/503Assignments/Homework7/Polynomial_Ziqi Wang.h
+
+/Users/ziwan/CLionProjects/503Assignments/Homework7/Polynomial_Ziqi Wang.h
+iostream
+-
+
+/Users/ziwan/CLionProjects/503Assignments/Homework7/main_Ziqi Wang.cpp
+iostream
+-
+Polynomial_Ziqi Wang.h
+/Users/ziwan/CLionProjects/503Assignments/Homework7/Polynomial_Ziqi Wang.h
+

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ziwan/CLionProjects/503Assignments/inclass5/IntegerSet.cpp
+iostream
+-
+iomanip
+-
+IntegerSet.h
+/Users/ziwan/CLionProjects/503Assignments/inclass5/IntegerSet.h
+
+/Users/ziwan/CLionProjects/503Assignments/inclass5/IntegerSet.h
+
+/Users/ziwan/CLionProjects/503Assignments/inclass5/main.cpp
+iostream
+-
+IntegerSet.h
+/Users/ziwan/CLionProjects/503Assignments/inclass5/IntegerSet.h
+

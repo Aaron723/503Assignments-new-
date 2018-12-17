@@ -1,0 +1,6 @@
+Event     Company Symbol      Number    Price     Total value    Time      
+Buy       AMZN                10        $132.66   $1326.60       17 : 11 : 09
+Buy       FRE                 1         $1.14     $1.14          17 : 12 : 48
+Buy       AMZN                1         $129.66   $129.66        17 : 13 : 30
+Buy       GOOG                1         $569.96   $569.96        17 : 13 : 42
+Buy       FRE                 1         $1.14     $1.14          17 : 14 : 48

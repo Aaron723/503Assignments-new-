@@ -1,5 +1,5 @@
 
-//edit on 10.12, Ziqi Wang
+//
 
 
 #include<iostream>

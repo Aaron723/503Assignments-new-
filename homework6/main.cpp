@@ -1,5 +1,5 @@
 
-//Ziqi Wang
+//Ziqi Wang 10.14 homework6
 #include <iostream>
 #include"Booklist_lastName.h"//add the header file and .cpp file.
 using namespace std;
@@ -16,7 +16,7 @@ int main()
              << "Choice7, sort the list(selection sort)\n"<< "Choice8, Sort the list(bubble sort)\n" <<"Choice9, Print the list\n"
              <<"when you enter 0, quit"<<endl;
         cin >> i;
-
+            //NOTICE: The position start from 0, and counter represent the number of book.
         switch (i)
         {
             case 1:

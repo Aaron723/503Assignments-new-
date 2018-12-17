@@ -130,8 +130,8 @@ void StockAccount::printPortfolio() {
                     break;
                 double price=atof((iofile1.SearchName(iofile1.selectFile(),name)).c_str());
                 currentNode->setStockPrice(price);
-                currentNode=currentNode->getNext();
                 sum+=price*currentNode->getShares();
+                currentNode=currentNode->getNext();
             }
             if(currentNode==stockList->getMyTail())
             {
@@ -241,8 +241,8 @@ void StockAccount::updatePortfolio() {
                 break;
             double price=atof((iofile1.SearchName(iofile1.selectFile(),name)).c_str());
             currentNode->setStockPrice(price);
-            currentNode=currentNode->getNext();
             sum+=price*currentNode->getShares();
+            currentNode=currentNode->getNext();
         }
         if(currentNode==stockList->getMyTail())
         {
